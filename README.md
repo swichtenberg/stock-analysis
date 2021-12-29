@@ -8,6 +8,10 @@ The project originated with a request for a tool to analyze the performance of s
 The purpose of the project was to refactor the existing VBA script to analyze data more efficiently, allowing more data to be analyzed in less time. Refactoring was particularly important as the client wished to greatly increase the dataset. It is expected the successfully refactored script will perform the same analysis on a dataset faster than the original script.
 
 ## Results
+The refactored script resulted in an analysis of the desired data in significantly less time.
+![VBA_Challenge_2017Original](https://user-images.githubusercontent.com/96216947/147621204-de5ac995-f806-4da8-8f13-277ba33e2d00.png) ![VBA_Challenge_2017](https://user-images.githubusercontent.com/96216947/147621207-91f48fe1-e71a-402f-b986-9cd245ac1c06.png)
+![VBA_Challenge_2018Original](https://user-images.githubusercontent.com/96216947/147621211-9d0d47df-7564-4aa2-99da-887cd8a96806.png) ![VBA_Challenge_2018](https://user-images.githubusercontent.com/96216947/147621215-20611a1a-27e6-4a7d-ba5b-2545d0368d57.png)
+
 The analysis is well described with screenshots and code
 
 Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
