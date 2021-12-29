@@ -42,8 +42,8 @@ The refactored script also included formatting changes to help visualize the per
 ![StockPerformance_2017-2018](https://user-images.githubusercontent.com/96216947/147622230-18f87fd7-94e4-4b14-a4f0-3588d882c6d2.JPG)
 
 ## Summary
-### Advantages of Refactoring
-
+### Advantages and Disadvantages of Refactoring
+Refactoring code has both advantages and disadvantages. While refactored code can make the code more efficient, use less memory, faster, or easier to read, this functionality may not always be necessary. It takes time and resources to refactor code 
 
 ### Disadvantages of Refactoring
 
