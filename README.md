@@ -29,8 +29,7 @@ For i = 0 To 11
 In contrast, the refactored script created several arrays and placed data from each row into those arrays. The script was able to do this by using a variable for each ticker to index the data in each array. As a result, the entire dataset only needed to be read one time for all tickers, drastically reducing the time to process the data. A sample of the refactored script is below.
 
 For j = 2 To RowCount
-    
-        If Cells(j, 1).Value = tickers(tickerIndex) Then
+            If Cells(j, 1).Value = tickers(tickerIndex) Then
           tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
         End If
                
