@@ -16,15 +16,15 @@ The refactored script resulted in an analysis of the desired data in significant
 
 The gains in efficiency were primarily due how the script read the raw data. The original script selected a given ticker and then proceeded to search each line of data for that ticker. This resulted in the entire dataset being read for each ticker and several times to complete the analysis. A sample of the original script is below.
 
-For i = 0 To 11
-    ticker = tickers(i)
-    totalVolume = 0
+    For i = 0 To 11
+        ticker = tickers(i)
+        totalVolume = 0
 
-    For j = 2 To RowCount
+        For j = 2 To RowCount
 
-    If Cells(j, 1).Value = ticker Then
-      totalVolume = totalVolume + Cells(j, 8).Value
-    End If
+        If Cells(j, 1).Value = ticker Then
+            totalVolume = totalVolume + Cells(j, 8).Value
+        End If
 
 In contrast, the refactored script created several arrays and placed data from each row into those arrays. The script was able to do this by using a variable for each ticker to index the data in each array. As a result, the entire dataset only needed to be read one time for all tickers, drastically reducing the time to process the data. A sample of the refactored script is below.
 
