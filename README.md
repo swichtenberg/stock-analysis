@@ -8,11 +8,15 @@ The project originated with a request for a tool to analyze the performance of s
 The purpose of the project was to refactor the existing VBA script to analyze data more efficiently, allowing more data to be analyzed in less time. Refactoring was particularly important as the client wished to greatly increase the dataset. It is expected the successfully refactored script will perform the same analysis on a dataset faster than the original script.
 
 ## Results
+### Performance
+
 The refactored script resulted in an analysis of the desired data in significantly less time. The analysis was completed in just over 0.164 seconds for the year 2017, a reduction of over 91% from the original script. Likewise, the analysis was completed in just over 0.210 seconds for the year 2018, a reduction of 89%.
 
 ![VBA_Challenge_2017Original](https://user-images.githubusercontent.com/96216947/147621204-de5ac995-f806-4da8-8f13-277ba33e2d00.png) ![VBA_Challenge_2017](https://user-images.githubusercontent.com/96216947/147621207-91f48fe1-e71a-402f-b986-9cd245ac1c06.png)
 
 ![VBA_Challenge_2018Original](https://user-images.githubusercontent.com/96216947/147621211-9d0d47df-7564-4aa2-99da-887cd8a96806.png) ![VBA_Challenge_2018](https://user-images.githubusercontent.com/96216947/147621215-20611a1a-27e6-4a7d-ba5b-2545d0368d57.png)
+
+### Refactoring the Script
 
 The gains in efficiency were primarily due how the script read the raw data. The original script selected a given ticker and then proceeded to search each line of data for that ticker. This resulted in the entire dataset being read for each ticker and many times total to complete the analysis. A sample of the original script is below.
 
@@ -36,6 +40,8 @@ In contrast, the refactored script created several arrays and placed data from e
             If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j - 1, 1).Value <> tickers(tickerIndex) Then
             tickerStartingPrices(tickerIndex) = Cells(j, 6).Value        
             End If
+
+### Stock Performance (2017 & 2018)
 
 The refactored script also included formatting changes to help visualize the performance of the stocks. A comparison of stock performance between 2017 and 2018 is below. The difference in performance between the two years is drastic and one would have been fortunate to have invested early in 2017.
 
