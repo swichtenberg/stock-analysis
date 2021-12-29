@@ -5,7 +5,7 @@
 The project originated with a request for a tool to analyze the performance of stocks in the energy sector. After successfully demonstrating the capabilities of the VBA script previously written, the client requested the ability to analyze all stocks in the market in a similar fashion.
 
 ### Purpose
-The purpose of the project was to refactor the existing VBA script in a way that would allow the script to analayze data more efficiently, allowing more data to be analyzed in less time. Refactoring was particularly important as the client wished to greatly increase the dataset. It is expected successfully refactoring the script will result in less time compiling data from the same dataset when compared to the original script.
+The purpose of the project was to refactor the existing VBA script to analyze data more efficiently, allowing more data to be analyzed in less time. Refactoring was particularly important as the client wished to greatly increase the dataset. It is expected the successfully refactored script will perform the same analysis on a dataset faster than the original script.
 
 ## Results
 The analysis is well described with screenshots and code
