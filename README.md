@@ -14,7 +14,7 @@ The refactored script resulted in an analysis of the desired data in significant
 
 ![VBA_Challenge_2018Original](https://user-images.githubusercontent.com/96216947/147621211-9d0d47df-7564-4aa2-99da-887cd8a96806.png) ![VBA_Challenge_2018](https://user-images.githubusercontent.com/96216947/147621215-20611a1a-27e6-4a7d-ba5b-2545d0368d57.png)
 
-The gains in efficiency were primarily due how the script read the raw data. The original script selected a given ticker and then proceeded to search each line of data for that ticker. This resulted in the entire dataset being read for each ticker and several times to complete the analysis. A sample of the original script is below.
+The gains in efficiency were primarily due how the script read the raw data. The original script selected a given ticker and then proceeded to search each line of data for that ticker. This resulted in the entire dataset being read for each ticker and many times total to complete the analysis. A sample of the original script is below.
 
     For i = 0 To 11
         ticker = tickers(i)
@@ -26,7 +26,7 @@ The gains in efficiency were primarily due how the script read the raw data. The
             totalVolume = totalVolume + Cells(j, 8).Value
         End If
 
-In contrast, the refactored script created several arrays and placed data from each row into those arrays. The script was able to do this by using a variable for each ticker to index the data in each array. As a result, the entire dataset only needed to be read one time for all tickers, drastically reducing the time to process the data. A sample of the refactored script is below.
+In contrast, the refactored script created several arrays and placed data from each row into those arrays. The script was able to do this by using a variable to index the data in each array. As a result, the entire dataset was read only one time for all tickers, drastically reducing the time to analyze the data. A sample of the refactored script is below.
 
     For j = 2 To RowCount
             If Cells(j, 1).Value = tickers(tickerIndex) Then
@@ -37,17 +37,10 @@ In contrast, the refactored script created several arrays and placed data from e
             tickerStartingPrices(tickerIndex) = Cells(j, 6).Value        
             End If
 
-The refactored script also included formatting changes to help visualize the performance of the stocks. Performance of those stocks for 2017 and 2018 are below. As can be seen, the year 2017 was much more fruitful for investors.
+The refactored script also included formatting changes to help visualize the performance of the stocks. A comparison of stock performance between 2017 and 2018 is below. The difference in performance between the two years is drastic and one would have been fortunate to have invested early in 2017.
 
 ![StockPerformance_2017-2018](https://user-images.githubusercontent.com/96216947/147622230-18f87fd7-94e4-4b14-a4f0-3588d882c6d2.JPG)
 
 ## Summary
 ### Advantages and Disadvantages of Refactoring
-Refactoring code has both advantages and disadvantages. While refactored code can make the code more efficient, use less memory, faster, or easier to read, this functionality may not always be necessary. It takes time and resources to refactor code 
-
-### Disadvantages of Refactoring
-
-There is a detailed statement on the advantages and disadvantages of refactoring code in general
-There is a detailed statement on the advantages and disadvantages of the original and refactored VBA script
-
-Refactoring is a key part of the coding process. When refactoring code, you aren’t adding new functionality; you just want to make the code more efficient—by taking fewer steps, using less memory, or improving the logic of the code to make it easier for future users to read. Refactoring is common on the job because first attempts at code won’t always be the best way to accomplish a task. Sometimes, refactoring someone else’s code will be your entry point to working with the existing code at a job.
+Refactoring code has both advantages and disadvantages. While refactored code can make the code more efficient, require less processing power, faster, or easier to read, this functionality may not always be necessary. It takes time and resources to refactor code and the effort may be wasted if there are only minor gains in functionality. As for the refactored script in this project, the increased speed at which the data is analyzed and how that data is presented is advantageous. Whether the creation of a more efficient script was worthwhile, it is difficult to say. The original script analyzed the given dataset in under 3 seconds which I believe does not warrant refactoring in and of itself. If the script is applied to a greatly expanded dataset the benefits of the refactored code may truly shine.
