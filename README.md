@@ -28,14 +28,14 @@ The gains in efficiency were primarily due how the script read the raw data. The
 
 In contrast, the refactored script created several arrays and placed data from each row into those arrays. The script was able to do this by using a variable for each ticker to index the data in each array. As a result, the entire dataset only needed to be read one time for all tickers, drastically reducing the time to process the data. A sample of the refactored script is below.
 
-For j = 2 To RowCount
+    For j = 2 To RowCount
             If Cells(j, 1).Value = tickers(tickerIndex) Then
-          tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
-        End If
+            tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
+            End If
                
-         If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j - 1, 1).Value <> tickers(tickerIndex) Then
+            If Cells(j, 1).Value = tickers(tickerIndex) And Cells(j - 1, 1).Value <> tickers(tickerIndex) Then
             tickerStartingPrices(tickerIndex) = Cells(j, 6).Value        
-         End If
+            End If
 
 The refactored script also included formatting changes to help visualize the performance of the stocks. Performance of those stocks for 2017 and 2018 are below. As can be seen, the year 2017 was much more fruitful for investors.
 
