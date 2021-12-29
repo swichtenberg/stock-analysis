@@ -48,5 +48,5 @@ The refactored script also included formatting changes to help visualize the per
 ![StockPerformance_2017-2018](https://user-images.githubusercontent.com/96216947/147622230-18f87fd7-94e4-4b14-a4f0-3588d882c6d2.JPG)
 
 ## Summary
-### Advantages and Disadvantages of Refactoring
+
 Refactoring code has both advantages and disadvantages. While refactored code can make the code more efficient, require less processing power, faster, or easier to read, this functionality may not always be necessary. It takes time and resources to refactor code and the effort may be wasted if there are only minor gains in functionality. As for the refactored script in this project, the increased speed at which the data is analyzed and how that data is presented is advantageous. Whether the creation of a more efficient script was worthwhile, it is difficult to say. The original script analyzed the given dataset in under 3 seconds which I believe does not warrant refactoring in and of itself. If the script is applied to a greatly expanded dataset the benefits of the refactored code may truly shine.
